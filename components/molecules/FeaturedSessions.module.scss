@@ -1,0 +1,45 @@
+@use '../../styles/abstracts' as *;
+
+.featured {
+  padding: $space-20 0;
+  background-color: var(--light-grey);
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  @include flex(row, flex-end, null, null);
+  justify-content: space-between;
+  margin-bottom: $space-12;
+}
+
+.headerText {
+  h2 {
+    margin-bottom: $space-3;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: var(--medium-grey);
+}
+
+.viewAll {
+  @include link-with-arrow;
+  align-self: flex-end;
+  text-decoration: none;
+}
+
+.linkArrow {
+  transition: transform 0.3s ease;
+}
+
+@include respond-to($breakpoint-md) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $space-4;
+  }
+}

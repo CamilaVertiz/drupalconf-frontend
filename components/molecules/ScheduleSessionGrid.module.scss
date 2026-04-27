@@ -1,0 +1,17 @@
+@use '../../styles/abstracts' as *;
+
+.grid {
+  @include grid(3, $space-8);
+}
+
+@include respond-to($breakpoint-lg) {
+  .grid {
+    @include grid(2, $space-6);
+  }
+}
+
+@include respond-to($breakpoint-md) {
+  .grid {
+    @include grid(1, $space-6);
+  }
+}

@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.card {
+  padding: $space-6;
+  border-radius: $radius-lg;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+
+  &--interactive {
+    transition: $transition-normal;
+
+    &:hover {
+      box-shadow: $shadow-xl;
+      transform: translateY(-$space-1);
+    }
+  }
+
+  &--flush {
+    padding: 0;
+  }
+}

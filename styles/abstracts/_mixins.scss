@@ -1,0 +1,149 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $gap: 0) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin grid($columns: 1, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+@mixin container($max-width: $container-max-width) {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+}
+
+@mixin respond-to($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@mixin card($padding: $space-6, $radius: $radius-lg) {
+  padding: $padding;
+  border-radius: $radius;
+  background-color: var(--white);
+  border: 1px solid var(--border-color);
+}
+
+@mixin card-interactive {
+  @include card;
+  transition: $transition-normal;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-$space-1);
+  }
+}
+
+@mixin glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@mixin text-gradient($from: var(--electric-blue), $to: #5ba3f0) {
+  background: linear-gradient(135deg, $from 0%, $to 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@mixin back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-weight: $font-weight-medium;
+  color: var(--medium-grey);
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}
+
+@mixin section-header {
+  margin-bottom: $space-12;
+
+  h2 {
+    margin-bottom: $space-3;
+  }
+}
+
+@mixin social-link($size: 2.5rem) {
+  width: $size;
+  height: $size;
+  border-radius: $radius-md;
+  @include flex-center;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@mixin link-with-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+  font-weight: $font-weight-semibold;
+  color: var(--electric-blue);
+  transition: color 0.3s ease;
+
+  &:hover .link-arrow {
+    transform: translateX(0.25rem);
+  }
+
+  .link-arrow {
+    transition: transform 0.3s ease;
+  }
+}
+
+/// Text truncation — single or multi-line
+/// Usage: @include truncate(1);  →  single line ellipsis
+///        @include truncate(3);  →  3-line clamp
+@mixin truncate($lines: 1) {
+  @if $lines == 1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin focus-ring($color: var(--ring), $width: 2px, $offset: 2px) {
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 $offset $color;
+  }
+}

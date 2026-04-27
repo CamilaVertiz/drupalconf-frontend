@@ -1,0 +1,81 @@
+@use '../../styles/abstracts' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: $z-modal;
+  background-color: var(--navy);
+}
+
+.inner {
+  @include container;
+  height: 5rem; // h-20
+
+  // Equal 1fr gutters centre the nav on the header, not on the space beside
+  // the logo. The third track is intentionally empty.
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  @include flex($align: center, $gap: $space-3);
+
+  // Otherwise the anchor stretches its track and the blank space is clickable.
+  justify-self: start;
+  text-decoration: none;
+}
+
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-md;
+  @include flex-center;
+  background-color: var(--electric-blue);
+}
+
+.logoLetter {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xl;
+  color: var(--white);
+}
+
+.logoText {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xl;
+  letter-spacing: -0.025em; // tracking-tight
+  font-family: var(--font-display);
+  color: var(--white);
+}
+
+.nav {
+  @include flex($align: center, $gap: $space-8);
+}
+
+.link {
+  font-weight: $font-weight-medium;
+  transition: color 0.3s ease;
+  position: relative;
+  padding-top: $space-1;
+  padding-bottom: $space-1;
+  font-family: var(--font-body);
+  color: var(--white);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}
+
+.linkActive {
+  color: var(--electric-blue);
+}
+
+.linkIndicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 0.125rem; // h-0.5
+  background-color: var(--electric-blue);
+}

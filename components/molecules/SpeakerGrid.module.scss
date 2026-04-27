@@ -1,0 +1,13 @@
+@use '../../styles/abstracts' as *;
+
+.grid {
+  @include grid(1, $space-8);
+
+  @include respond-to($breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond-to($breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

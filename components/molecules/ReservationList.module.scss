@@ -1,0 +1,68 @@
+@use '../../styles/abstracts' as *;
+
+.results {
+  margin-top: $space-8;
+  padding-top: $space-8;
+  border-top: 1px solid var(--border-color);
+}
+
+.emptyState {
+  text-align: center;
+  padding: $space-8 0;
+}
+
+.emptyIcon {
+  width: 4rem;
+  height: 4rem;
+  margin-inline: auto;
+  margin-bottom: $space-4;
+  border-radius: $radius-full;
+  @include flex-center;
+  background-color: var(--light-grey);
+  color: var(--medium-grey);
+}
+
+.emptyTitle {
+  font-weight: $font-weight-medium;
+  margin-bottom: $space-2;
+  color: var(--medium-grey);
+}
+
+.emptyText {
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+
+  &--withCta {
+    margin-bottom: $space-4;
+  }
+}
+
+.resultsLabel {
+  font-size: $font-size-xs;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-4;
+  color: var(--medium-grey);
+}
+
+.resultsList {
+  > * + * {
+    margin-top: $space-3;
+  }
+}
+
+.pastCta {
+  @include flex(row, null, center, $space-2);
+  padding: $space-3 $space-6;
+  border-radius: $radius-md;
+  font-weight: $font-weight-semibold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  text-decoration: none;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

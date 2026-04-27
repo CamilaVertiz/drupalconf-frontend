@@ -1,0 +1,88 @@
+@use '../../styles/abstracts' as *;
+
+.sessionItem {
+  padding: $space-4;
+  border-radius: $radius-md;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--light-grey);
+  border: 1px solid var(--border-color);
+}
+
+.statusBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.25rem;
+}
+
+.sessionContent {
+  padding-left: $space-3;
+}
+
+.sessionTop {
+  @include flex(row, flex-start, null, null);
+  justify-content: space-between;
+  margin-bottom: $space-2;
+}
+
+.sessionInfo {
+  flex: 1;
+}
+
+.sessionTitle {
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-1;
+}
+
+.sessionDatetime {
+  font-size: $font-size-sm;
+  margin-bottom: $space-1;
+  color: var(--medium-grey);
+}
+
+.sessionDetails {
+  @include flex(row, null, center, $space-2);
+}
+
+.sessionRoom {
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-0-5 $space-2;
+  border-radius: $radius-full;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+  margin-left: $space-3;
+}
+
+.sessionLink {
+  @include flex(row, null, center, $space-1);
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--electric-blue);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover .linkArrow {
+    transform: translateX(0.25rem);
+  }
+
+  .linkArrow {
+    transition: transform 0.3s ease;
+  }
+}

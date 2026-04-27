@@ -1,0 +1,74 @@
+@use '../../styles/abstracts' as *;
+
+.hero {
+  @include card($space-12);
+  margin-bottom: $space-8;
+}
+
+.heroInner {
+  @include flex(row, flex-start, center, $space-8);
+  flex-direction: column;
+
+  @include respond-to($breakpoint-md) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.avatar {
+  width: 8rem;
+  height: 8rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  font-size: 2.25rem;
+  font-weight: $font-weight-bold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.info {
+  flex: 1;
+  text-align: center;
+
+  @include respond-to($breakpoint-md) {
+    text-align: left;
+  }
+}
+
+.name {
+  margin-bottom: $space-3;
+}
+
+.jobTitle {
+  font-size: $font-size-xl;
+  margin-bottom: $space-2;
+  color: var(--medium-grey);
+}
+
+.company {
+  font-size: $font-size-lg;
+  margin-bottom: $space-6;
+  color: var(--medium-grey);
+}
+
+.social {
+  @include flex(row, null, center, $space-3);
+  justify-content: center;
+
+  @include respond-to($breakpoint-md) {
+    justify-content: flex-start;
+  }
+}
+
+.socialLink {
+  @include social-link(3rem);
+  background-color: var(--light-grey);
+  color: var(--navy);
+
+  &:hover {
+    background-color: var(--electric-blue);
+    color: var(--white);
+    transform: scale(1.1);
+  }
+}

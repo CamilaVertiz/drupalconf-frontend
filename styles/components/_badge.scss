@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.badge {
+  display: inline-block;
+  border-radius: $radius-full;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-xs;
+  padding: $space-0-5 $space-2;
+  color: var(--white);
+  background-color: var(--badge-bg, var(--medium-grey));
+  line-height: 1.4;
+
+  &--sm {
+    font-size: $font-size-xs;
+    padding: $space-0-5 $space-2;
+  }
+
+  &--md {
+    font-size: $font-size-sm;
+    padding: $space-1 $space-3;
+  }
+
+  &--lg {
+    font-size: $font-size-sm;
+    padding: $space-2 $space-4;
+  }
+}

@@ -1,0 +1,398 @@
+@use '../../styles/abstracts' as *;
+
+.registrationModal {
+  position: fixed;
+  inset: 0;
+  z-index: $z-modal;
+  @include flex-center;
+  padding: $space-4;
+  background-color: rgba(13, 27, 42, 0.7);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: $radius-lg;
+  padding: $space-8;
+  background-color: var(--white);
+}
+
+.closeBtn {
+  position: absolute;
+  top: $space-6;
+  right: $space-6;
+  width: 2rem;
+  height: 2rem;
+  @include flex-center;
+  border-radius: $radius-md;
+  transition: background-color 0.3s ease;
+  color: var(--medium-grey);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--light-grey);
+  }
+}
+
+.progress {
+  margin-bottom: $space-8;
+}
+
+.progressSteps {
+  @include flex($align: center, $justify: space-between);
+  margin-bottom: $space-2;
+}
+
+.progressStep {
+  flex: 1;
+  @include flex($direction: column, $align: center);
+}
+
+.progressDot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: $radius-full;
+  transition: $transition-normal;
+}
+
+.progressDotActive {
+  background-color: var(--electric-blue);
+}
+
+.progressDotInactive {
+  background-color: var(--border-color);
+}
+
+.progressLabel {
+  font-size: $font-size-xs;
+  margin-top: $space-2;
+}
+
+.progressLabelActive {
+  color: var(--navy);
+  font-weight: $font-weight-semibold;
+}
+
+.progressLabelInactive {
+  color: var(--medium-grey);
+  font-weight: $font-weight-normal;
+}
+
+.progressConnector {
+  flex: 1;
+  height: 0.125rem;
+  margin-inline: $space-2;
+  margin-top: -1.25rem; // -mt-5
+}
+
+.progressConnectorActive {
+  background-color: var(--electric-blue);
+}
+
+.progressConnectorInactive {
+  background-color: var(--border-color);
+}
+
+.form {
+  > * + * {
+    margin-top: $space-5;
+  }
+}
+
+.formTitle {
+  margin-bottom: $space-6;
+}
+
+.field {
+  display: block;
+}
+
+.label {
+  display: block;
+  margin-bottom: $space-2;
+  font-weight: $font-weight-medium;
+}
+
+.required {
+  color: var(--destructive);
+}
+
+.input {
+  width: 100%;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-grey);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+
+  &:focus {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 0 2px var(--ring);
+  }
+}
+
+.inputError {
+  border-color: var(--destructive);
+
+  &:focus {
+    border-color: var(--destructive);
+  }
+}
+
+.textarea {
+  width: 100%;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-grey);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  resize: none;
+  outline: none;
+
+  &:focus {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 0 2px var(--ring);
+  }
+}
+
+.error {
+  font-size: $font-size-sm;
+  margin-top: $space-1;
+  color: var(--destructive);
+}
+
+.hint {
+  font-size: $font-size-sm;
+  margin-top: $space-2;
+  color: var(--medium-grey);
+}
+
+.btnPrimary {
+  width: 100%;
+  padding: $space-3 $space-6;
+  border-radius: $radius-md;
+  font-weight: $font-weight-semibold;
+  transition: $transition-normal;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.btnPrimaryWithMargin {
+  margin-top: $space-8;
+}
+
+.btnPrimaryNoMargin {
+  margin-top: 0;
+}
+
+.btnSecondary {
+  width: 100%;
+  margin-top: $space-3;
+  font-weight: $font-weight-medium;
+  transition: color 0.3s ease;
+  color: var(--medium-grey);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}
+
+.sessionCard {
+  padding: $space-5;
+  border-radius: $radius-md;
+  margin-bottom: $space-6;
+  background-color: var(--light-grey);
+  border: 1px solid var(--border-color);
+}
+
+.sessionTitle {
+  margin-bottom: $space-3;
+}
+
+.speakerRow {
+  @include flex($align: center, $gap: $space-3);
+  margin-bottom: $space-4;
+}
+
+.speakerAvatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+}
+
+.speakerName {
+  font-weight: $font-weight-medium;
+}
+
+.sessionDetails {
+  > * + * {
+    margin-top: $space-2;
+  }
+  margin-bottom: $space-4;
+}
+
+.sessionDatetime {
+  color: var(--navy);
+}
+
+.sessionRoom {
+  color: var(--medium-grey);
+}
+
+.badges {
+  @include flex($align: center, $gap: $space-2);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+}
+
+.seats {
+  margin-bottom: $space-6;
+}
+
+.seatsRow {
+  @include flex($align: center, $gap: $space-2);
+  margin-bottom: $space-2;
+}
+
+.seatsDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: $radius-full;
+}
+
+.seatsText {
+  font-weight: $font-weight-medium;
+}
+
+.waitlistLabel {
+  @include flex($align: center, $gap: $space-2);
+  margin-top: $space-3;
+  cursor: pointer;
+}
+
+.waitlistCheckbox {
+  width: 1rem;
+  height: 1rem;
+  border-radius: $radius-sm;
+  accent-color: var(--electric-blue);
+}
+
+.registrantCard {
+  padding: $space-4;
+  border-radius: $radius-md;
+  margin-bottom: $space-6;
+  background-color: var(--light-grey);
+}
+
+.registrantRow {
+  @include flex($align: flex-start, $justify: space-between);
+}
+
+.registrantLabel {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  margin-bottom: $space-2;
+  color: var(--medium-grey);
+}
+
+.registrantName {
+  font-weight: $font-weight-medium;
+}
+
+.registrantEmail {
+  color: var(--medium-grey);
+}
+
+.editBtn {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  transition: color 0.3s ease;
+  color: var(--electric-blue);
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.confirmation {
+  text-align: center;
+}
+
+.successIcon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: $radius-full;
+  margin-inline: auto;
+  margin-bottom: $space-6;
+  @include flex-center;
+  background-color: #10b981;
+}
+
+.confirmationTitle {
+  margin-bottom: $space-3;
+}
+
+.confirmationText {
+  margin-bottom: $space-6;
+  color: var(--medium-grey);
+}
+
+.confirmationSummary {
+  padding: $space-4;
+  border-radius: $radius-md;
+  margin-bottom: $space-6;
+  text-align: left;
+  background-color: var(--light-grey);
+}
+
+.summaryTitle {
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-1;
+}
+
+.summaryDetail {
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}
+
+.reservationsLink {
+  display: block;
+  margin-top: $space-3;
+  font-weight: $font-weight-medium;
+  transition: color 0.3s ease;
+  color: var(--medium-grey);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}

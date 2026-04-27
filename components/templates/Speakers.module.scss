@@ -1,0 +1,25 @@
+@use '../../styles/abstracts' as *;
+
+.speakers {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.container {
+  @include container;
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+}
+
+.header {
+  margin-bottom: $space-12;
+
+  h1 {
+    margin-bottom: $space-4;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-xl;
+  color: var(--medium-grey);
+}

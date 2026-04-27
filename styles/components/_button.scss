@@ -1,0 +1,79 @@
+@use '../abstracts' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-2;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: $font-weight-semibold;
+  border-radius: $radius-md;
+  transition: $transition-normal;
+  text-decoration: none;
+  white-space: nowrap;
+
+  &--primary {
+    background-color: var(--electric-blue);
+    color: var(--white);
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: $shadow-xl;
+    }
+  }
+
+  &--secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+
+    &:hover {
+      background-color: var(--border-color);
+    }
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: var(--foreground);
+
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: var(--foreground);
+    border: 1px solid var(--border);
+
+    &:hover {
+      background-color: var(--secondary);
+    }
+  }
+
+  &--sm {
+    padding: $space-1 $space-3;
+    font-size: $font-size-sm;
+  }
+
+  &--md {
+    padding: $space-2 $space-4;
+    font-size: $font-size-sm;
+  }
+
+  &--lg {
+    padding: $space-3 $space-6;
+    font-size: $font-size-base;
+  }
+
+  &--block {
+    width: 100%;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+}

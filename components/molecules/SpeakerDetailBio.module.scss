@@ -1,0 +1,22 @@
+@use '../../styles/abstracts' as *;
+
+.bio {
+  @include card($space-8);
+  margin-bottom: $space-8;
+
+  h3 {
+    margin-bottom: $space-4;
+  }
+}
+
+.bioText {
+  p {
+    margin-bottom: $space-4;
+    color: var(--navy);
+    line-height: 1.7;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

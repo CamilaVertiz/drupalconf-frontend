@@ -1,0 +1,205 @@
+
+.gradient-navy-to-blue {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--electric-blue) 100%);
+}
+
+.gradient-blue-to-navy {
+  background: linear-gradient(135deg, var(--electric-blue) 0%, var(--navy) 100%);
+}
+
+.gradient-light-grey {
+  background: linear-gradient(180deg, #ffffff 0%, var(--light-grey) 100%);
+}
+
+.gradient-subtle {
+  background: linear-gradient(180deg, rgba(45, 125, 210, 0.05) 0%, rgba(45, 125, 210, 0.1) 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #1a3a5c 50%, var(--electric-blue) 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.gradient-button {
+  background: linear-gradient(135deg, var(--electric-blue) 0%, #1e5bb8 100%);
+}
+
+.gradient-button-hover {
+  background: linear-gradient(135deg, #1e5bb8 0%, var(--navy) 100%);
+}
+
+.gradient-radial-blue {
+  background: radial-gradient(circle at center, var(--electric-blue) 0%, var(--navy) 100%);
+}
+
+.gradient-radial-navy {
+  background: radial-gradient(circle at center, var(--navy) 0%, #0a1018 100%);
+}
+
+.gradient-radial-subtle {
+  background: radial-gradient(circle at center, rgba(45, 125, 210, 0.1) 0%, transparent 70%);
+}
+
+.gradient-conic {
+  background: conic-gradient(
+    from 0deg,
+    var(--navy),
+    var(--electric-blue),
+    var(--navy)
+  );
+}
+
+.gradient-conic-subtle {
+  background: conic-gradient(
+    from 0deg,
+    rgba(45, 125, 210, 0.1),
+    rgba(45, 125, 210, 0.2),
+    rgba(45, 125, 210, 0.1)
+  );
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, var(--electric-blue) 0%, #5ba3f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, var(--navy) 0%, #2a4a6c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #d0e4f5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.gradient-badge-keynote {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a5a 100%);
+}
+
+.gradient-badge-talk {
+  background: linear-gradient(135deg, var(--electric-blue) 0%, #1e5bb8 100%);
+}
+
+.gradient-badge-workshop {
+  background: linear-gradient(135deg, #4ecdc4 0%, #3db8b0 100%);
+}
+
+.gradient-badge-panel {
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+}
+
+.gradient-badge-lightning {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.gradient-track-frontend {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.gradient-track-backend {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.gradient-track-devops {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.gradient-track-ux {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+}
+
+.gradient-skill-beginner {
+  background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+}
+
+.gradient-skill-intermediate {
+  background: linear-gradient(135deg, #eab308 0%, #ca8a04 100%);
+}
+
+.gradient-skill-advanced {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
+
+.gradient-overlay-dark {
+  background: linear-gradient(180deg, rgba(13, 27, 42, 0) 0%, rgba(13, 27, 42, 0.8) 100%);
+}
+
+.gradient-overlay-light {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.9) 100%);
+}
+
+.gradient-overlay-blue {
+  background: linear-gradient(180deg, rgba(45, 125, 210, 0) 0%, rgba(45, 125, 210, 0.2) 100%);
+}
+
+.gradient-animated {
+  background: linear-gradient(
+    -45deg,
+    var(--navy),
+    var(--electric-blue),
+    var(--navy),
+    var(--electric-blue)
+  );
+  background-size: 400% 400%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-mesh {
+  background: 
+    radial-gradient(at 40% 20%, rgba(45, 125, 210, 0.3) 0px, transparent 50%),
+    radial-gradient(at 80% 0%, rgba(13, 27, 42, 0.2) 0px, transparent 50%),
+    radial-gradient(at 0% 50%, rgba(45, 125, 210, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 50%, rgba(13, 27, 42, 0.3) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(45, 125, 210, 0.2) 0px, transparent 50%),
+    radial-gradient(at 80% 100%, rgba(13, 27, 42, 0.2) 0px, transparent 50%);
+}
+
+.border-gradient-blue {
+  border-image: linear-gradient(135deg, var(--electric-blue), var(--navy)) 1;
+}
+
+.border-gradient-navy {
+  border-image: linear-gradient(135deg, var(--navy), var(--electric-blue)) 1;
+}
+
+.gradient-glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-glass-dark {
+  background: linear-gradient(
+    135deg,
+    rgba(13, 27, 42, 0.8) 0%,
+    rgba(13, 27, 42, 0.6) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(45, 125, 210, 0.2);
+}

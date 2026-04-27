@@ -1,0 +1,136 @@
+@use '../../styles/abstracts' as *;
+
+.sponsors {
+  padding: $space-20 0;
+  background-color: var(--white);
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: $space-16;
+
+  h2 {
+    margin-bottom: $space-3;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: var(--medium-grey);
+}
+
+.tier {
+  margin-bottom: $space-12;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.tierLabel {
+  text-align: center;
+  margin-bottom: $space-6;
+}
+
+.tierBadge {
+  display: inline-block;
+  padding: $space-1 $space-4;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  background-color: var(--light-grey);
+  color: var(--navy);
+}
+
+.grid {
+  @include flex-center;
+  flex-wrap: wrap;
+
+  &--platinum {
+    gap: $space-12;
+  }
+
+  &--gold {
+    gap: $space-8;
+  }
+
+  &--silver {
+    gap: $space-6;
+  }
+}
+
+.logo {
+  @include flex-center;
+  border-radius: $radius-lg;
+
+  &--platinum {
+    padding: $space-12;
+    background-color: var(--white);
+    border: 2px solid var(--border-color);
+    min-width: 17.5rem;
+
+    .sponsorName {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      color: var(--navy);
+    }
+  }
+
+  &--gold {
+    padding: $space-10 $space-8;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    min-width: 12.5rem;
+
+    .sponsorName {
+      font-size: $font-size-xl;
+      font-weight: $font-weight-semibold;
+      color: var(--navy);
+    }
+  }
+
+  &--silver {
+    padding: $space-4 $space-8;
+    background-color: var(--light-grey);
+    min-width: 10rem;
+
+    .sponsorName {
+      font-weight: $font-weight-medium;
+      color: var(--navy);
+    }
+  }
+}
+
+.sponsorName {
+  color: var(--navy);
+}
+
+@include respond-to($breakpoint-md) {
+  .grid {
+    &--platinum,
+    &--gold,
+    &--silver {
+      gap: $space-4;
+    }
+  }
+
+  .logo {
+    &--platinum {
+      min-width: 14rem;
+      padding: $space-8;
+    }
+
+    &--gold {
+      min-width: 10rem;
+      padding: $space-6;
+    }
+
+    &--silver {
+      min-width: 8rem;
+    }
+  }
+}

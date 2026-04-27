@@ -1,0 +1,87 @@
+@use '../../styles/abstracts' as *;
+
+.listing {
+  display: block;
+}
+
+.header {
+  @include flex(row, space-between, flex-end, $space-4);
+  margin-bottom: $space-12;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  h2 {
+    margin-bottom: $space-3;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: var(--medium-grey);
+}
+
+.viewAllLink {
+  @include link-with-arrow;
+  white-space: nowrap;
+}
+
+.grid {
+  @include grid(3, $space-8);
+
+  @include respond-to($breakpoint-lg) {
+    @include grid(2, $space-8);
+  }
+
+  @include respond-to($breakpoint-sm) {
+    @include grid(1, $space-6);
+  }
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card {
+  @include card-interactive;
+  padding: $space-6;
+
+  &:hover {
+    .cardTitle {
+      color: var(--electric-blue);
+    }
+  }
+}
+
+.cardHeader {
+  @include flex(row, space-between, flex-start, $space-2);
+  margin-bottom: $space-4;
+}
+
+.cardTitle {
+  font-weight: $font-weight-semibold;
+  transition: color 0.3s ease;
+}
+
+.statusBadge {
+  display: inline-block;
+  padding: $space-1 $space-2;
+  border-radius: $radius-full;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-semibold;
+  white-space: nowrap;
+  margin-left: $space-2;
+  background-color: var(--white);
+}
+
+.cardDetails {
+  @include flex(column, null, null, $space-2);
+}
+
+.detailItem {
+  @include flex(row, null, center, $space-2);
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}

@@ -1,0 +1,92 @@
+@use '../abstracts' as *;
+
+html {
+  font-size: var(--font-size, 16px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: $font-weight-extrabold;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: $font-weight-semibold;
+  line-height: 1.3;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: $font-weight-semibold;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.6;
+}
+
+label {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-weight-medium, 600);
+  line-height: 1.5;
+}
+
+button {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-weight-medium, 600);
+  line-height: 1.5;
+}
+
+input {
+  font-size: var(--text-base, 1rem);
+  font-weight: var(--font-weight-normal, 400);
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+@include respond-to($breakpoint-md) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+@include respond-to($breakpoint-sm) {
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+  }
+}

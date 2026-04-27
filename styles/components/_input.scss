@@ -1,0 +1,42 @@
+@use '../abstracts' as *;
+
+.input {
+  width: 100%;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border: 1px solid var(--border-color);
+  background-color: var(--input-background);
+  font-family: var(--font-body);
+  font-size: $font-size-base;
+  color: var(--foreground);
+  transition: border-color 0.3s ease;
+  outline: none;
+
+  &::placeholder {
+    color: var(--muted-foreground);
+  }
+
+  &:focus {
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 0 3px rgba(45, 125, 210, 0.2);
+  }
+
+  &--error {
+    border-color: var(--destructive);
+
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.2);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.textarea {
+  @extend .input;
+  resize: vertical;
+  min-height: 4.5rem;
+}

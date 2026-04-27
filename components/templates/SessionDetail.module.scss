@@ -1,0 +1,40 @@
+@use '../../styles/abstracts' as *;
+
+.sessionDetail {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.main {
+  max-width: $content-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+  padding-bottom: $space-12;
+}
+
+.register {
+  text-align: center;
+}
+
+.registerBtn {
+  padding: $space-4 2.5rem;
+  border-radius: $radius-md;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-lg;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: $shadow-xl;
+  }
+}
+
+.registerInfo {
+  margin-top: $space-3;
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}

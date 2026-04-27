@@ -1,0 +1,10 @@
+@use '../../styles/abstracts' as *;
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+}

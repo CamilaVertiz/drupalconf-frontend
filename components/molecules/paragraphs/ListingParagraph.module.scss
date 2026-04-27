@@ -1,0 +1,15 @@
+@use '@/styles/abstracts' as *;
+
+.listing {
+  padding: $space-8 0;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: $space-4;
+}

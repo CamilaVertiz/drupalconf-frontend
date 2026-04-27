@@ -1,0 +1,67 @@
+@use '../../styles/abstracts' as *;
+
+.sessions {
+  @include card($space-8);
+
+  h3 {
+    margin-bottom: $space-6;
+  }
+}
+
+.sessionsList {
+  > * + * {
+    margin-top: $space-4;
+  }
+}
+
+.sessionLink {
+  display: block;
+  padding: $space-6;
+  border-radius: $radius-md;
+  background-color: var(--light-grey);
+  border: 1px solid var(--border-color);
+  transition: $transition-normal;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    box-shadow: $shadow-card-hover;
+
+    .sessionTitle {
+      color: var(--electric-blue);
+    }
+  }
+}
+
+.sessionHeader {
+  @include flex(row, flex-start, null, null);
+  justify-content: space-between;
+  margin-bottom: $space-3;
+}
+
+.sessionTitleWrapper {
+  flex: 1;
+}
+
+.sessionTitle {
+  margin-bottom: $space-2;
+  transition: color 0.3s ease;
+}
+
+.sessionMeta {
+  color: var(--medium-grey);
+}
+
+.sessionBadges {
+  @include flex(row, null, center, $space-2);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+}

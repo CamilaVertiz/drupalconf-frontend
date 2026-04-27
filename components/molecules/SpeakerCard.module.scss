@@ -1,0 +1,75 @@
+@use '../../styles/abstracts' as *;
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card {
+  @include card;
+  transition: $transition-normal;
+
+  &:hover {
+    box-shadow: $shadow-xl;
+    transform: translateY(-$space-1);
+  }
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: $space-4;
+}
+
+.avatar {
+  width: 6rem;
+  height: 6rem;
+  margin-inline: auto;
+  border-radius: $radius-full;
+  @include flex-center;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  transition: transform 0.3s ease;
+
+  .cardLink:hover & {
+    transform: scale(1.05);
+  }
+}
+
+.featuredBadge {
+  position: absolute;
+  top: 0;
+  right: 25%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  background-color: var(--badge-workshop);
+  color: var(--white);
+}
+
+.cardInfo {
+  text-align: center;
+}
+
+.name {
+  margin-bottom: $space-2;
+  transition: color 0.3s ease;
+
+  .cardLink:hover & {
+    color: var(--electric-blue);
+  }
+}
+
+.title {
+  font-weight: $font-weight-medium;
+  margin-bottom: $space-1;
+  color: var(--medium-grey);
+}
+
+.company {
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}

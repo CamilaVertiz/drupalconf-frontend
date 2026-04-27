@@ -1,0 +1,13 @@
+// Convert pixels to rem units.
+// Usage: font-size: rem(16);  →  font-size: 1rem;
+@function rem($px) {
+  $base: 16px;
+  @return math.div($px, $base) * 1rem;
+}
+
+// Convert pixels to em units.
+// Usage: margin-bottom: em(24);       →  margin-bottom: 1.5em;
+//        margin-bottom: em(24, 20);   →  margin-bottom: 1.2em;
+@function em($px, $base: 16) {
+  @return math.div($px, $base) * 1em;
+}

@@ -1,0 +1,25 @@
+@use '../../styles/abstracts' as *;
+
+.speakerDetail {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.back {
+  @include back-link;
+}
+
+.content {
+  max-width: $content-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+  padding-top: $space-8;
+}
+
+.main {
+  max-width: $content-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+  padding-top: $space-12;
+  padding-bottom: $space-12;
+}

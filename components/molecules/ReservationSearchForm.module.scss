@@ -1,0 +1,42 @@
+@use '../../styles/abstracts' as *;
+
+.field {
+  margin-bottom: $space-6;
+
+  label {
+    display: block;
+    margin-bottom: $space-2;
+    font-weight: $font-weight-medium;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: $space-3 $space-4;
+  border-radius: $radius-md;
+  border: 1px solid var(--border-color);
+  background-color: var(--light-grey);
+  transition: border-color 0.3s ease;
+
+  &:focus {
+    outline: none;
+    border-color: var(--electric-blue);
+    box-shadow: 0 0 0 3px rgba(45, 125, 210, 0.2);
+  }
+}
+
+.submit {
+  width: 100%;
+  padding: $space-3 $space-6;
+  border-radius: $radius-md;
+  font-weight: $font-weight-semibold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  transition: $transition-normal;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}

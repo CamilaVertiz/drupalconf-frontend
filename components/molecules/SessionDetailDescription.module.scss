@@ -1,0 +1,23 @@
+@use '../../styles/abstracts' as *;
+
+.description {
+  @include card($space-8);
+  margin-bottom: $space-8;
+
+  h3 {
+    margin-bottom: $space-4;
+  }
+}
+
+.descriptionText {
+  p {
+    margin-bottom: $space-4;
+    color: var(--navy);
+    line-height: 1.7;
+    white-space: pre-line;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

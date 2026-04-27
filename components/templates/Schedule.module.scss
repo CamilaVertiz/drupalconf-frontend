@@ -1,0 +1,25 @@
+@use '../../styles/abstracts' as *;
+
+.schedule {
+  min-height: 60vh;
+  padding: $space-20 0;
+  background-color: var(--light-grey);
+}
+
+.container {
+  @include container;
+}
+
+.header {
+  margin-bottom: $space-12;
+
+  h1 {
+    margin-bottom: $space-3;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: var(--medium-grey);
+  max-width: 40rem;
+}

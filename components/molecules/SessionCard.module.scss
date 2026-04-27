@@ -1,0 +1,72 @@
+@use '../../styles/abstracts' as *;
+
+.cardLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    .card {
+      box-shadow: $shadow-xl;
+      transform: translateY(-$space-1);
+    }
+
+    .title {
+      color: var(--electric-blue);
+    }
+
+    .linkAction .icon {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+.card {
+  @include card($space-6);
+  transition: $transition-normal;
+}
+
+.title {
+  transition: color 0.3s ease;
+}
+
+.linkAction {
+  @include flex(row, null, center, $space-2);
+  margin-top: auto;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-semibold;
+  color: var(--electric-blue);
+  transition: $transition-normal;
+
+  .icon {
+    transition: transform 0.3s ease;
+  }
+}
+
+.speaker {
+  @include flex(row, null, center, $space-3);
+  margin-bottom: $space-4;
+}
+
+.avatar {
+  width: 3rem;
+  height: 3rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  font-weight: $font-weight-semibold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+}
+
+.speakerName {
+  font-weight: $font-weight-semibold;
+}
+
+.time {
+  font-size: $font-size-sm;
+  color: var(--medium-grey);
+}
+
+.cardTitle {
+  margin-bottom: $space-3;
+}

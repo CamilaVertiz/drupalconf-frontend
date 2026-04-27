@@ -1,0 +1,43 @@
+@use '../../styles/abstracts' as *;
+
+.speakerCard {
+  @include card($space-6);
+  margin-bottom: $space-8;
+}
+
+.speakerInner {
+  @include flex(row, null, center, $space-4);
+}
+
+.speakerAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: $radius-full;
+  @include flex-center;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  background-color: var(--electric-blue);
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.speakerInfo {
+  flex: 1;
+}
+
+.speakerName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  transition: color 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}
+
+.speakerRole {
+  color: var(--medium-grey);
+}

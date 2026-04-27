@@ -1,0 +1,4 @@
+@import '../styles/index.scss';
+
+/* Base element styles now live in styles/base/ */
+/* CSS custom properties now live in styles/base/_custom-properties.scss */

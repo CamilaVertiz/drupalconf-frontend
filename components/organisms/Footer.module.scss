@@ -1,0 +1,115 @@
+@use '../../styles/abstracts' as *;
+
+.footer {
+  background-color: var(--navy);
+  color: var(--white);
+}
+
+.inner {
+  @include container;
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: $space-12;
+  margin-bottom: $space-12;
+}
+
+.brand {
+}
+
+.brandHeader {
+  @include flex($align: center, $gap: $space-3);
+  margin-bottom: $space-4;
+}
+
+.brandIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-md;
+  @include flex-center;
+  background-color: var(--electric-blue);
+}
+
+.brandLetter {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xl;
+}
+
+.brandName {
+  font-weight: $font-weight-bold;
+  font-size: $font-size-xl;
+  letter-spacing: -0.025em;
+  font-family: var(--font-display);
+}
+
+.brandDescription {
+  color: var(--medium-grey);
+}
+
+.columnTitle {
+  font-weight: $font-weight-semibold;
+  margin-bottom: $space-4;
+  font-family: var(--font-display);
+}
+
+.linkList {
+  > * + * {
+    margin-top: $space-2;
+  }
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: var(--medium-grey);
+  transition: color 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}
+
+.socialList {
+  @include flex($align: center, $gap: $space-3);
+}
+
+.socialLink {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $radius-md;
+  @include flex-center;
+  transition: $transition-normal;
+  background-color: rgba(255, 255, 255, 0.1);
+
+  &:hover {
+    background-color: var(--electric-blue);
+  }
+}
+
+.bottom {
+  padding-top: $space-8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  @include flex($align: center, $justify: space-between);
+  color: var(--medium-grey);
+}
+
+.bottomLinks {
+  @include flex($align: center, $gap: $space-6);
+}
+
+.bottomLink {
+  color: var(--medium-grey);
+  transition: color 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--electric-blue);
+  }
+}

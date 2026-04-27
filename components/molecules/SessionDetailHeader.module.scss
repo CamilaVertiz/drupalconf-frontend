@@ -1,0 +1,38 @@
+@use '../../styles/abstracts' as *;
+
+.content {
+  max-width: $content-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+  padding-top: $space-8;
+}
+
+.back {
+  @include back-link;
+}
+
+.headerSection {
+  max-width: $content-max-width;
+  margin-inline: auto;
+  padding-inline: $container-padding-x;
+  padding-top: $space-12;
+}
+
+.badges {
+  @include flex(row, null, center, $space-2);
+  flex-wrap: wrap;
+  margin-bottom: $space-6;
+}
+
+.badge {
+  display: inline-block;
+  padding: $space-1 $space-3;
+  border-radius: $radius-full;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: var(--white);
+}
+
+.title {
+  margin-bottom: $space-8;
+}

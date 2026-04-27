@@ -1,0 +1,53 @@
+:root {
+  --font-size: 16px;
+
+  --navy: #0D1B2A;
+  --white: #FFFFFF;
+  --electric-blue: #2D7DD2;
+  --light-grey: #F4F6F8;
+  --medium-grey: #6B7280;
+  --border-color: #E5E7EB;
+
+  --badge-keynote: #2D7DD2;
+  --badge-talk: #6B7280;
+  --badge-workshop: #F59E0B;
+  --badge-panel: #9333EA;
+  --badge-lightning: #10B981;
+
+  --skill-beginner: #10B981;
+  --skill-intermediate: #2D7DD2;
+  --skill-advanced: #EF4444;
+
+  --track-frontend: #8B5CF6;
+  --track-backend: #F59E0B;
+  --track-devops: #06B6D4;
+  --track-ux: #EC4899;
+
+  --font-display: 'Sora', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --background: var(--white);
+  --foreground: var(--navy);
+  --card: var(--white);
+  --card-foreground: var(--navy);
+  --popover: var(--white);
+  --popover-foreground: var(--navy);
+  --primary: var(--electric-blue);
+  --primary-foreground: var(--white);
+  --secondary: var(--light-grey);
+  --secondary-foreground: var(--navy);
+  --muted: var(--light-grey);
+  --muted-foreground: var(--medium-grey);
+  --accent: var(--electric-blue);
+  --accent-foreground: var(--white);
+  --destructive: #EF4444;
+  --destructive-foreground: var(--white);
+  --border: var(--border-color);
+  --input: transparent;
+  --input-background: var(--light-grey);
+  --switch-background: var(--medium-grey);
+  --font-weight-medium: 600;
+  --font-weight-normal: 400;
+  --ring: var(--electric-blue);
+  --radius: 0.5rem;
+}

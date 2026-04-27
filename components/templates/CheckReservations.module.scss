@@ -1,0 +1,49 @@
+@use '../../styles/abstracts' as *;
+
+.page {
+  min-height: 100vh;
+  background-color: var(--light-grey);
+}
+
+.container {
+  @include container;
+  padding-top: $space-16;
+  padding-bottom: $space-16;
+}
+
+.formWrapper {
+  max-width: $form-max-width;
+  margin-inline: auto;
+}
+
+.header {
+  margin-bottom: $space-8;
+  text-align: center;
+
+  h1 {
+    margin-bottom: $space-3;
+  }
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: var(--medium-grey);
+}
+
+.formCard {
+  @include card($space-8);
+}
+
+.helperText {
+  font-size: $font-size-sm;
+  text-align: center;
+  margin-top: $space-6;
+  color: var(--medium-grey);
+}
+
+.errorText {
+  font-size: $font-size-sm;
+  text-align: center;
+  margin-top: $space-6;
+  color: var(--destructive);
+}
